@@ -1,0 +1,1 @@
+This repo contains solutions for Coursera Specialization "Program on a Higher Level" 2016 june session. https://www.coursera.org/specializations/scala This was created for my own reference on solutions and also to help people looking for references which makes sense :)

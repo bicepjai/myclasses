@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>01F85B7B-6712-43EF-8175-4DCB22CF3A3E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Cassini</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82FCBA6A8AC5518EA8950E65F62B53D684B97AB4</key>
+		<string>https://github.com/bicepjai/learnIOSProjects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>stanford2015fall/Cassini/Cassini.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82FCBA6A8AC5518EA8950E65F62B53D684B97AB4</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bicepjai/learnIOSProjects.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82FCBA6A8AC5518EA8950E65F62B53D684B97AB4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82FCBA6A8AC5518EA8950E65F62B53D684B97AB4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

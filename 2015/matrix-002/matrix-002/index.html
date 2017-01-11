@@ -1,0 +1,528 @@
+<!DOCTYPE html><html xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta charset="utf-8"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Coding the Matrix: Linear Algebra through Computer Science Applications | Coursera</title>    <link href='https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/css/spark.main.css' rel='stylesheet' type='text/css' >
+      <link href='https://www.coursera.org/maestro/api/course/974150/course.css' rel='stylesheet' type='text/css' >
+    <link href='https://spark-public.s3.amazonaws.com/matrix/static/images/favicon.ico' rel='icon' >
+</head><body><div id="fb-root"></div><div id="spark-help" class="hide"><div data-helpwidget data-helpwidget-link-help="http://support.coursera.org" data-helpwidget-link-discuss="http://class.coursera.org/mooc/" data-helpwidget-link-filter="coursera-admin-helpwidget-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" class="helpwidget-tab">Admin Help</div></div><a href="https://learner.coursera.help/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget role="button" class="helpwidget-tab hide">Premium Support</div></a><div id="spark" class="hide">
+
+<a data-coursera-admin-helpwidget-link rel="help" href="https://class.coursera.org/mooc/help/messaging" title="Emails and Announcements" style="display:none;">Learn more</a>
+<a data-coursera-admin-helpwidget-link rel="help" href="https://class.coursera.org/mooc/help/manager/glossary/overview" title="Section Manager"  style="display:none;">Learn more</a>
+
+<div style="width:240px;float:right;" class="course-page-sidebar">
+    
+  <div style="width:100%;background-color:#f8f8f8;padding:15px;border:1px solid #d0d0d0;">
+
+    <h2 class="hidden">Reminders</h2>
+
+        
+                    <div id="coursera-calendar-help" class="modal" style="display:none;" data-modal-overlay-class="course-modal-overlay-dark">
+           <div class="modal-header"><h4>Course Calendar ICS</h4></div>
+           <div class="modal-body">
+            <div>
+                If you use a calendar that accepts .ics files (ex: google, ical), then import the URL below to see due dates for all quizzes and assignments <br/><br/>
+            </div>
+            <div class="input-prepend">
+             <span class="add-on"><span class="icon-calendar"></span></span>
+             <input type="text" style="width:450px;" value="https://class.coursera.org/matrix-002/api/course/calendar" readonly="readonly" onclick="this.select()" data-modal-focus/>
+            </div>
+           </div>
+        </div>
+        
+                    <h4>
+                                <a href="https://class.coursera.org/matrix-002/api/course/calendar" data-modal="#coursera-calendar-help" data-tooltip="You can always access the Calendar here">
+                    <span class="icon-calendar"></span>
+                </a>
+                                Upcoming Deadlines            </h4>
+
+            
+       
+
+            
+       
+
+            
+       
+
+            
+       
+
+            
+       
+
+            <!-- DEADLINES FOOTER -->        
+        
+
+    
+        <hr>
+    
+       
+
+    
+        <h4>Recent Discussions</h4>
+    <div data-coursera-forum-mini-threads-widget>
+        Loading threads...
+    </div>
+    <a href="https://class.coursera.org/matrix-002/forum/index">Browse all discussions &raquo;</a>
+    
+  </div>
+
+  
+</div>
+
+
+    
+
+
+<div style="padding-right:280px">
+    
+    <h2 class="course-page-header">Announcements</h2>
+    <!-- ANNOUNCEMENTS PREAMBLE -->    
+                        <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Score versus percentage</h3>
+                                        <div dir="auto">Some students have been confused and upset at their final scores as reported by Coursera. &nbsp;I am writing to clarify things. &nbsp;When I first saw the complaints, I thought there was a misgrade, but that is not the case. &nbsp;Here is the situation.<br><br>Coursera asks the instructor to provide a formula and a threshold. &nbsp;The instructor can specify linear combinations of assignment scores, and mins and maxes of these linear combinations. &nbsp;The threshold is a number. &nbsp;The Statement of Accomplishment is awarded to students for whom the value of the formula exceeds the threshold.<br><br>We used a formula that matched the stated criterion for earning a Statement of Accomplishment. &nbsp;The maximum value of this formula is 75, and the threshold is 60. &nbsp;(I will explain the formula below.) &nbsp;Unfortunately, Coursera reports the value of the formula to each student as a percentage score. &nbsp;<strong>If you got 75, this means you achieved the maximum possible value of the formula. </strong>&nbsp;<br><br>Coursera also asks the instructor to provide a formula and a threshold to determine the awarding of distinction. &nbsp;For this formula, the score reported is your actual percentage achieved.<br><br>I will now review the criterion for earning a Statement of Accomplishment. &nbsp;You must achieve 60% or above on each <strong>assignment</strong> in the course, except that I drop the assignments from your worst week. &nbsp;(Since the assignments for week 6 were small, I combined them into a single assignment for this purpose.) &nbsp;<strong>In addition</strong>, you must earn at least 80% on Vec class and Mat class. &nbsp;<br><br>Now for the formula. &nbsp;Because of the difference between the 60% you must achieve on each regular assignment and the 80% you must achieve on Vec class and Mat class, we discounted your score on Vec and Mat by 60/80. &nbsp;Then we computed the minimum of all your scores, the undiscounted scores on your regular assignments and the discounted scores on Vec class and Mat class. &nbsp;That is your final score (except, remember, we dropped the regular assignment scores from your worst week). &nbsp;The top <em>undiscounted</em> score you can achieve on Vec class and Mat class is 100%, so the top <em>discounted</em> score you can achieve on those is 75%.&nbsp;<br><br>You can compute your own percentage score as follows:<br><ul><li>Merge the scores for Week 6: compute the total earned for that week, and divide by (11+3+2+5).</li><li>Drop the scores of your worst week (measured by smallest regular assignment percentage).</li><li>Compute the smallest percentage of the remaining assignments.</li></ul>If you need to report to someone your percentage score for the course, that is the number you should use.<br><br>I regret that the number reported to you as a percentage score did not adequately reflect your performance in the course. &nbsp;This is an unfortunate consequence of Coursera's approach of using a single number to determine eligibility for a Statement of Accomplishment and of my complicated criterion.</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Sun  3 May 2015 12:00 PM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Misgrade?</h3>
+                                        <div dir="auto">I'm hearing from students that final scores might be inaccurate. &nbsp;Don't worry---I'll investigate, and we'll take care of it.<br>Philip</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Sun  3 May 2015  8:45 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Post-course celebration?</h3>
+                                        <div dir="auto">We've still got a couple weeks to go before the final deadline, but I look forward to celebrating the completion of the course. &nbsp;I'll be raising a pint in Boston and Providence and invite students in those locations to join me. &nbsp;I encourage those students in other areas to plan their own post-course celebrations. &nbsp;<a href="https://class.coursera.org/matrix-002/forum/thread?thread_id=975#post-4152" target="_blank">Here's the thread</a>.<br><br>Best of luck!<br>Phil</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon 30 Mar 2015 11:10 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Gradient Descent, and, finally, Orthogonalization</h3>
+                                        <div dir="auto"><p class="p1"><span class="s1">In this part of the course, you will study the problem of finding the vector nearest to a vector <b>b</b> among all vectors in a given vector space. You should start by doing the lab, which uses a very general method, <i>gradient descent</i>, to implement a rudimentary machine-learning algorithm. Since this lab is based on the material from <i>The Inner Product</i>, you can do the lab before viewing the lectures on Orthogonalization and before starting <tt>Orthogonalization_problems</tt>.&nbsp;</span></p>In addressing the nearest-vector problem, we will develop an algorithm we call <tt>orthogonalize</tt>. It is commonly known as <i>Gram-Schmidt orthogonalization</i>. This algorithm can be used to address fundamental computational problems, such as finding a basis for a vector space specified as the span of given vectors or specified as the null space of a given matrix.&nbsp;<p></p>
+<p class="p1"><span class="s1">We build on orthogonalization to obtain the <i>QR factorization</i> of a matrix.&nbsp; The QR factorization can be used, as you will see in lectures and in the assigned problems, to find the solution to a matrix-vector equation (a system of linear equations) when there is such a solution, and to find the nearest thing to a solution when there is not (the <i>least squares</i> solution).&nbsp; QR factorization is at the heart of the part of <tt>solver</tt> that deals with matrices and vectors over <b>R</b>.&nbsp; One simple application of least squares is linear regression, finding the line that best fits given data.</span></p>
+
+<p class="p1"><span class="s1">I have included in Orthogonalization_problems several ungraded problems.&nbsp; Some (but not all) students benefit greatly from going through calculations (such as finding the projection of a vector along another vector or orthogonal to another vector) by hand, as it were, rather than merely by running some code.&nbsp; I hope you find these problems useful.</span></p>
+<p class="p1"><span class="s1">I have somewhat reluctantly included doctests for some of the coding problems—reluctantly because my well-prepared students should find it easy to come up with tests on their own.&nbsp; It is easy to test whether the vectors output by a procedure are mutually orthogonal (just compute the dot product of each vector with every other vector) or whether the vectors have norm one (just compute the dot product of each vector with itself).&nbsp; It is not hard to test whether the first i vectors in the input list span the same space as the first i vectors in the output list: To check if Span(S1) equals Span(S1 </span><span class="s3">∪</span><span class="s1"> S2), see if rank(S1) = rank(S1 </span><span class="s3">∪</span><span class="s1"> S2), and this allows you to test whether the vectors in S2 are already in Span(S1).</span></p>
+<p class="p1"><span class="s1">To see if <tt>u = QR_solve(A,b)</tt> is correctly computed when A is a square matrix, you can see if <tt>u</tt> is a solution to the equation&nbsp;<tt>A*x=b</tt> by checking if the residual is almost a zero vector.&nbsp; What about when <tt>A</tt> is not a square matrix, when it has more rows than columns?&nbsp; You will learn that in this case <tt>A*u</tt> should be the vector closest to <tt>b</tt> among all vectors in the column space of <tt>A</tt>.&nbsp; You will learn that therefore the residual <tt>b - A*u</tt> should be orthogonal to the column space of <tt>A</tt>.&nbsp; And how can you check that latter condition?&nbsp; Think about how you can check it using a transpose and a matrix-vector multiplication (or just a vector-matrix multiplication).</span></p>
+<p class="p2">In this last pair of assignments, I ask that you do your best to come up with tests of your own, and test your code in the Python REPL.&nbsp; As an extra challenge but one that might well <i>save</i> you time, <strong>I ask you to imagine that, instead of an unlimited number of submissions with almost instant feedback, you have one chance to submit your solution.&nbsp; How carefully would you read the problem?&nbsp; How attentively would you review the lecture material?&nbsp; How thoroughly would you test your solutions?&nbsp;</strong><br><span class="s1"></span></p>
+<p class="p2"><br></p><p class="p2">Congratulations to all of you who have gotten this far! You are nearly at the top of Mount Matrix.<br><span class="s1"></span></p>
+<p class="p2">There’s much more we could have done.&nbsp; How do you solve least squares when the columns of the matrix are not linearly independent?&nbsp; How do you compress an image or remove noise from an audio signal or efficiently search for a needle in a haystack?&nbsp; What does Google’s Pagerank method have to do with matrices?&nbsp; How can you use linear algebra to predict the long-term behavior of a dynamic process? &nbsp;This course is a little too short to cover these topics—but now you have the foundation to study them.<br><span class="s1"></span></p>
+<p class="p2">Please consider taking the post-course survey when you are done with the course. Your feedback is very important to us. We already have learned a lot from you about how to improve the course if we get a chance to offer it again and/or a chance to offer a mini-course with additional topics. Thanks to all of you who contributed your thoughts and ideas on the Forum. Even if you never posted anything to the Forum, just through submitting your work you have helped us understand the range of possible answers. Each of you can have still more impact by taking the survey, for the results could help guide Brown University's involvement in online learning.&nbsp;<br><span class="s1"></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Have fun!&nbsp;</span></p>
+<p class="p1"><span class="s1">Phil</span></p></div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon 23 Mar 2015  8:00 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Don't publicly share materials from this course, including your solutions</h3>
+                                        <div dir="auto">Some of you are creating public repositories hosting the materials from this course. &nbsp;Please take these down immediately or make them private. &nbsp;This includes the assignments, the stencils, and the utility code. &nbsp;Please do not share materials from this course.<br><br>Thanks,<br>Philip</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Tue 17 Mar 2015 10:03 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Gaussian Elimination and the Inner Product</h3>
+                                        <div dir="auto">In this part of the course, we develop the algorithmic ideas that enable us to solve computational problems, some that have occupied our minds for quite a while, and some new ones.<br><br>This week there are four assignments, but they are each quite small, so the Statement of Accomplishment requirements are somewhat relaxed. &nbsp;For <em>this</em> week, you are graded not on your score on each assignment separately, but on all the assignments combined together. &nbsp;There are eighteen problems/tasks being assigned this week, so you should aim for successfully completing at least 60% of them--or about 11 problems/tasks--to meet the requirements. &nbsp;(Same idea for distinction.)<br><br>This week comprises two units, <em>Gaussian Elimination</em> and <em>The Inner Product.</em>&nbsp; For each, there is a short problem set: <tt>Gaussian_Elimination_problems</tt> and <tt>The_Inner_Product_problems</tt>.<br><br>There are two labs this week, but neither is very complicated. The&nbsp;<i>Secret-Sharing Lab</i>&nbsp;can be done before the lectures since it does not depend conceptually on the new material---it builds on the idea of dimension and matrix invertibility--but the module it uses,&nbsp;<code>independence</code>, is written using the algorithmic ideas outlined in Gaussian Elimination. The&nbsp;<i>Factoring Lab</i>&nbsp;does explicitly use a module,&nbsp;<code>echelon</code>, that we develop in Gaussian Elimination, and I outline the ideas for factoring at the end of the lectures on Gaussian Elimination, but you can in principle carry out this lab before mastering the concepts in Gaussian Elimination. This second lab involves some tricky ideas---after all, the problem of integer factoring has been known for over two hundred years and you're learning the rudiments of an algorithm (Dixon's) that was only published in 1981---but we guide you through these ideas with an example.<br><br>There will be a lab next week that builds on The Inner Product.<br><br>Have fun! Those of you with lots of compute power and RAM and patience can try factoring some integers that are considerably larger than the ones given in the Lab Assignment--or pose challenges to your fellow students.</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon 16 Mar 2015  6:00 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>3/14/15 9:26</h3>
+                                        <div dir="auto">Where I am, the current date is 3/14/15 and the time is 9:26. :)</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Sat 14 Mar 2015  6:26 AM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Dimension, and some remarks about bugs, testing, and having a dialogue with Python</h3>
+                                        <div dir="auto">This week we continue to build up the mathematics of linear algebra. The second most important concept in linear algebra is dimension. Here we learn how the concept of basis gives rise to the concept of dimension, via the Exchange Lemma. We discover that the concept of dimension allows us to make mathematical arguments that resolve many of the questions raised in preceding weeks. Building on dimension, we introduce other important concepts: the rank of a set of vectors, the rank of a matrix, direct sum, and the dual of a vector space. We prove a powerful theorem about linear functions, The Kernel-Image Theorem, and its corollary about matrices, the Rank-Nullity Theorem. We give a nice criterion for matrix invertibility.&nbsp;<br><br>This is the most mathematical part of the course. The mathematical work we do in this week lays the groundwork for the computational methods discussed in the remaining weeks.<br><br>I have some remarks intended to help you as you test and debug your code.<br><br>1) I have been looking through a lot of student code. &nbsp;I find a lot of interesting bugs, but I posted <a href="https://class.coursera.org/matrix-002/forum/thread?thread_id=421#post-3187" target="_blank" title="Link: https://class.coursera.org/matrix-002/forum/thread?thread_id=421#post-3187">here</a>&nbsp;and <a href="https://class.coursera.org/matrix-002/forum/thread?thread_id=421#post-3268" target="_blank">here</a> about a couple of bugs I've seen a bunch recently. &nbsp;These bugs can affect different kinds of code (I saw an instantiation in morph(...) recently) but I prepared a <a href="https://d396qusza40orc.cloudfront.net/matrix/set_bug_tests.py" target="_blank" title="Link: https://d396qusza40orc.cloudfront.net/matrix/set_bug_tests.py">doctest</a> file that tests for certain instantiations of this bug in vec and mat. &nbsp;Note that some instantiations of the bug do not keep <tt>vec</tt> and <tt>mat</tt> from passing the grader (something I plan to remedy for the future), so you might try running these tests if you are having trouble with other problems such as Matrix-Vector Matrix-Matrix Multiplication that build on vec and mat. &nbsp;If you find some errors involving sets (whether involving <tt>vec</tt> or <tt>mat</tt> or not) , you're invited to post <a href="https://class.coursera.org/matrix-002/forum/thread?thread_id=816" target="_blank">here</a>.<br><br>2) I see a surprisingly large number of posts of the form "Help me---my code does not pass the grader" from students who have not done the items on the checklist <a href="https://class.coursera.org/matrix-002/wiki/tips#checklist" target="_blank">"</a><em><a href="https://class.coursera.org/matrix-002/wiki/tips#checklist" target="_blank" title="Link: https://class.coursera.org/matrix-002/wiki/tips#checklist">What do I do when the grader says my correct solution is incorrect?</a></em><a href="https://class.coursera.org/matrix-002/wiki/tips#checklist" target="_blank" title="Link: https://class.coursera.org/matrix-002/wiki/tips#checklist">"</a>&nbsp; The staff spend lots of time investigating reports from students who would have found their bugs on their own if they had followed the checklist. &nbsp;This is time the staff does not spend investigating deeper, more mysterious issues. &nbsp;So please, please, please refer to the checklist and do some more careful testing on your own before you post. &nbsp;I have in mind particularly items 8, 9, 10, and 11, and especially 11: "<font color="#333333">Import your code from the Python REPL, and try it out on examples...." &nbsp;If you are working on, say, <tt>morph(...)</tt> from <tt>Dimension_problems</tt>, you should start up the Python REPL and explicitly import your work from <tt>Dimension_problems.py</tt>:</font><br><font color="#333333"></font><pre><code><font color="#333333">underwood:matrix klein$ python3<br></font>Type "help", "copyright", "credits" or "license" for more information.<br>&gt;&gt;&gt; from Dimension_problems import *<br>&gt;&gt;&gt; morph(...)</code></pre>From the Python REPL, you can try out arguments and see how your code behaves on them. &nbsp;You will get much more information than you will if you keep Python at a distance by just running it on doctests from the command line or (and I'm sure none of you does this!) just submitting your work to the grader without testing it first. &nbsp;You might find that there is a discrepancy between what you thought was saved in your stencil and what is really there.<br><br>3) I very much want to encourage you to have dialogues with Python. &nbsp;In the context of this class, I think that is the best way to learn the material. &nbsp;I've created an annotated <a href="https://d396qusza40orc.cloudfront.net/matrix/morph_coding_example.py" target="_blank" title="Link: https://d396qusza40orc.cloudfront.net/matrix/morph_coding_example.py">example</a> of how I might interact with Python to test my morph(...) procedure. &nbsp;However, if you have time, please just play around with linear algebra in the Python REPL. &nbsp; I think you'll find it fun and rewarding!<br><br>Phil</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Wed 11 Mar 2015  7:11 PM PDT</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Week 5: The Basis; comments on some problems in The_Matrix; general advice; and a change in the Statement of Accomplishment requirements</h3>
+                                        <div dir="auto">Week 5!  We've reached the most math-heavy part of this course.
+
+Now that you have mastered matrix multiplication, matrix inverse, and null space, we will build up the mathematical foundation for reasoning about vectors and matrices.  The key concept---perhaps the most important in all of linear algebra--is that of the <em>basis</em>.
+<br><br>&nbsp;And now for some other announcements:
+<br><br><ul><li>Some students are having trouble passing Problems 10 through 15 of <tt>The_Matrix_problems</tt>.  In order for your solution to pass for each of these problems, the corresponding pieces of your <tt>Mat</tt> implementation must be working.  For example, for <tt>vM_mat_mat_mult(A,B)</tt> to pass, your vector-matrix multiplication procedure must be working.  This is in conflict with the previously recommended order of work for this week---my apologies.<br><br>Those problems are tricky for another reason: unlike most problems in this course, for these problems your solution must take on a special form.  For example, your code for <tt>vM_mat_mat_mult(A,B)</tt> must explicitly do vector-matrix multiplication using the * operator, as in <tt>v*B</tt>.  Your code for <tt>lin_comb_vec_mat_mult(v, M)</tt> must compute the answer as a linear combination of vectors, i.e. a sum of scalar-vector products. This means it does not suffice to write <tt>lin_comb_vec_mat_mult(v, M)</tt> so that it does vector-matrix multiplication from scratch.  Part of what I am trying to teach in this course is the ability to think at a higher level of abstraction---in terms of linear combinations and dot-products and vector-matrix multiplications---rather than just at the level of which numbers to multiply and what gets added up.<br><br></li><li>We've noticed on rare occasions some buggy implementations of <tt>Vec</tt> or <tt>Mat</tt> that pass the grader. &nbsp;I find it interesting that I continue to see novel bugs, bugs I haven't seen in teaching this course so many times before. &nbsp;I will try to come up with yet more doctests that evince these bugs, but please be aware: when your solution looks correct but is not accepted, your&nbsp;<tt>Vec</tt> or <tt>Mat</tt>&nbsp;could be at fault.<br><br></li><li>&nbsp;I want to again emphasize my recommendation that in solving these problems and testing your solutions you work with the Python REPL.  I fear too many people write their solutions in their stencils and proceed to submit their solutions to us, without first testing their solutions, both with the doctests we have provided and with tests they invent on their own.  The purpose of these problems is that they ideally force you to think about the concepts being addressed.  As programmers, our thinking is aided by trying things out with a computer.
+
+However, I don't recommend spending hours at a time on this stuff.  If you get stuck, move on or take a (long) break and come back to it later.  Careful review of the lecture material and thoughtful reflection and thinking about tests --- all while in a rested, refreshed state---are more productive than pounding away, making small changes to your code in an attempt to figure out what the grader expects of you.  If you think you don't understand what is expected of you, please formulate a question that is as specific as you can make it.  If you have what you think is a solution but it's not accepted by the grader, most likely you have a bug in your code--either in your solution or in some support code.  I appreciate that it's hard to find those bugs, especially when you don't know why the grader is rejecting your code.  Once you do figure out your bug, consider posting a doctest that your code would not have passed, so others can benefit.<br><br></li><li>&nbsp;Finally: I have slightly relaxed the requirement for a statement of accomplishment and for distinction.  In evaluating your work, I will allow one week's assignments (out of the eight) to score below the thresholds.  This does not include vec and mat, for which the thresholds are still in effect.  I will update the course overview once I can figure out the right wording.&nbsp;</li></ul>&nbsp;Good luck, and have fun! Philip<br></div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon  2 Mar 2015 12:35 PM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Problem 15 of The_Matrix_problems</h3>
+                                        <div dir="auto"> In the file The_Matrix_problems.pdf, the description of Problem 15 was inaccurate.<br><br>&nbsp;It said
+<br><br><ul><li>"For this procedure, the only operation you are allowed to do on A is vector-matrix-vector multiplication, using the * operator: v*A."</li></ul>I've <a href="https://d396qusza40orc.cloudfront.net/matrix/The_Matrix_problems.pdf" target="_blank">updated</a> it to say:&nbsp;<br><br><ul><li>&nbsp;"For this procedure,&nbsp;the only operation you are allowed to do on B is vector-matrix multiplication, using the * operator: v*B".</li></ul>&nbsp;Sorry about the error.<br></div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Wed 25 Feb 2015  6:21 PM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>matutil and mat</h3>
+                                        <div dir="auto">Since the procedures <tt>mat2rowdict( )</tt> and <tt>mat2coldict( )</tt> in matutil use the <tt>[ ] </tt>operator in <tt>Mat</tt>, you must implement the <tt>getitem( )</tt> procedure in <tt>mat.py</tt> before you will be able to use these procedures and before you can complete Problems 10 through 15 of <tt>The_Matrix_problems</tt>.</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Tue 24 Feb 2015  4:35 AM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Week 3: The Matrix</h3>
+                                        <div dir="auto">Week 3 is upon us, and with it we enter the middle third of the course. This week's topic, The Matrix, represents a transition. Most of it is, in a sense, mechanics, but it opens the door to the more mathy material that comes next.&nbsp;<br><br>There is a <strong>lot</strong> of work being assigned this week.&nbsp;There are three assignments:&nbsp;<code>The_Matrix_problems</code>,&nbsp;<code>mat</code>, and&nbsp;<code>ecc_lab</code>.&nbsp;You should consider being strategic about your completion of the work. &nbsp;Don't spend too much time on any one problem. &nbsp;Before seeking perfect scores on&nbsp;<span style="font-family: monospace;">The_Matrix_problems&nbsp;</span>and&nbsp;<code>ecc_lab</code>, make sure you get at least at least 60%. &nbsp;You can always return to assignments and complete more problems. &nbsp;Remember, you have three weeks to complete the assignments. &nbsp;Next week's assignment won't be as heavy, so you'll have time to catch up.
+
+<h4><span style="font-family: monospace;">The_Matrix_problems</span></h4>You should start with the problems in&nbsp;<span style="font-family: monospace;">The_Matrix_problems</span>. &nbsp;For the first nine and for Problems 17 and 18, you need write nothing in&nbsp;<span style="font-family: monospace;">mat</span>. &nbsp;Problems 10 through 14 are very strange problems. &nbsp;In each, you must write a basic operation (matrix-vector or vector-matrix multiplication) in terms of more basic operations on vectors. &nbsp;You can make use of procedures provided in &nbsp;<span style="font-family: monospace;">matutil</span>, which you'll learn about in the first lecture. &nbsp;Since these procedures depend on vector operations, you can implement them before you do your&nbsp;<span style="font-family: monospace;">mat&nbsp;</span>implementation. &nbsp;Read the instructions carefully; as they make clear, these problems expect you to implement the operations in a specific way, using a specific formulation of matrix-vector/vector-matrix multiplication.<br><br>Problem 15 is similar but implements matrix-matrix multiplication using vector-matrix multiplication, so you'll want to implement vector-matrix multiplication in&nbsp;<span style="font-family: monospace;">mat</span>&nbsp;before starting on this problem.<br><br>Problem 16 uses a module, <span style="font-family: monospace;">solver</span>, that will for the present remain a black box. &nbsp;(In subsequent weeks, we'll learn how it works and implement most of it.)
+
+<h4><span style="font-family: monospace;">mat</span></h4>Your implementation of&nbsp;<span style="font-family: monospace;">mat</span>, like your implementation of&nbsp;<span style="font-family: monospace;">vec</span>, is critical to your success in this course. &nbsp;You are required to score 80% or greater on this assignment, and you should try to perfect it before starting on&nbsp;<code>ecc_lab</code>. &nbsp;I would like you to implement matrix_vector_mul and&nbsp;vector_matrix_mul and transpose in ways that efficiently exploit sparsity in the matrix, and in the lecture I describe an algorithm to use, but exploiting sparsity is <strong>not</strong> required at this point. &nbsp;(For more advanced assignments outside the scope of this course, such as Pagerank, it is essential.)<br><br>Remember that, in code using Mat or Vec, you should only use the operators such as <tt>*</tt> and <tt>+</tt> and <tt>[ ]</tt> rather than the procedures such as <tt>dot( )</tt> and <tt>matrix_vector_mul( )</tt> and <tt>add( )</tt> and <tt>getitem( )</tt>. &nbsp;To ensure this, use the commands<br><pre><code>from vec import Vec</code></pre>and<br><pre><code>from mat import Mat</code></pre>to bring the definitions of Vec and Mat into the REPL or into the module you are working on. &nbsp;In fact, even in the definitions of procedures in <tt>mat.py</tt>, you can use the operators. &nbsp;For example, you can use [ ] in your definitions of add( ) and equal( ).<br><br><h4><span style="font-family: monospace;">ecc_lab<br></span></h4>The background for this lab is described in the lectures. &nbsp;Here I'll only say that it depends on&nbsp;<span style="font-family: monospace;">mat</span>.
+
+<h4>Flashcards</h4>In this part of the course, you will learn several definitions/interpretations of matrix-vector, vector-matrix, and matrix-matrix multiplication. &nbsp;I urge you: commit these to memory! &nbsp;If you have gotten to the point where these interpretations are second nature, where they become part of you, where you can call them up without effort, you will have a much easier time following the lectures to come. &nbsp;To support you in this effort, I have put together a little <a href="https://d396qusza40orc.cloudfront.net/matrix/flashcards.pdf" target="_blank" title="Link: https://d396qusza40orc.cloudfront.net/matrix/flashcards.pdf">document</a> with flashcards to review these definitions and some of the others you have seen. &nbsp;If you have access to a printer, print this out (double-sided if possible) and cut them up and study, study, study! &nbsp;It will be worth the effort.<br><br>Have fun!<br>Philip</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon 23 Feb 2015  1:16 PM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Using Vec</h3>
+                                        <div dir="auto">A few comments on Vec.<br><br>First, I want to emphasize a point I made at 4:45 in the video <em>The Vector: Dictionary-based representations of vectors</em>. &nbsp;When you use Vecs, you should <strong>not</strong> use the named procedures such as <tt>getitem(v,k)</tt> and <tt>add(u,v)</tt> and <tt>scalar_mul(v, alpha)</tt>. &nbsp;You should instead use the syntax provided, &nbsp;such as<br><div></div><pre><code><div>&gt;&gt;&gt; v['a'] = 1.0</div><div>&gt;&gt;&gt; b = b - (b*v)*v</div></code></pre><div>This is important because the auto-grader expects you to do so. &nbsp;In any module in which you plan to invoke the Vec constructor, you should include the command<tt><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><pre><code>from vec import Vec</code></pre></span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Don't import anything else from </span><tt>vec</tt><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">.</span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><br></span></tt><br>Second, despite the fact that the stencil provided for default arguments to the constructor for Vec, you should <strong>not</strong> make use of the defaults. &nbsp;Python's default arguments are evaluated at define-time, which means that, if you use the default arguments, you might experience some unexpected sharing. &nbsp;(I guess I learned something about Python.) &nbsp;When you construct a Vec, explicitly specify both arguments. <br><br>&nbsp;If you don't trust yourself to remember not to use the default arguments, you can edit your <tt>vec.py</tt> stencil to remove the default arguments (replace <tt>def __init__(self, labels = set(), function = {})</tt> with <tt>def __init__(self, labels, function)</tt>) or apply this <a href="https://d396qusza40orc.cloudfront.net/matrix/vecdefault.patch" target="_blank" title="Link: https://d396qusza40orc.cloudfront.net/matrix/vecdefault.patch">patch</a>, which does the same thing. &nbsp;But you don't have to make this change; just avoid using the default arguments to be safe.<br><br>Finally, you might notice that Vec defines a method is_almost_zero(), which returns a Boolean. &nbsp;This is a convenience that I added after making the lecture videos. &nbsp;As we will see when we study <em>The Matrix</em>, (starting next week), there are times when it would be convenient to check whether an expression's value is a zero vector or nearly a zero vector. &nbsp;You can use this method for this purpose.<br></div></div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Tue 17 Feb 2015  8:59 AM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Week 2 has begun</h3>
+                                        <div dir="auto">The third week of Coding the Matrix, Week 2, has begun. Last week we learned about vectors and the basic operations on them. We saw how to form lines and line segments using sets of vectors.&nbsp;<br><br>This week we dig deeper into the idea of sets of vectors, and using such sets to form simple geometric objects such as lines and planes. (Such geometric objects are sometimes called&nbsp;<em>flats</em>.) This study gives rise to the notion of a&nbsp;<em>vector space</em>.&nbsp;<br><br>Your work for Week 0 (consisting of <em>Python Lab</em>, <em>Inverse Index Lab</em>, <em>The Function problems</em> and <em>The Field problems</em>) is due in just under a week. You have nearly two more weeks to complete your work for Week 1 (<em>Politics Lab</em>, <em>The Vector problems</em>, and <em>Vec</em>).&nbsp;<br><br>The work being assigned this week is quite light (just <em>The Vector Space Problems</em>, which is a rather short assignment), which should enable you to catch up on previously assigned work. Remember, you will continue to use your&nbsp;<code>Vec</code>&nbsp;implementation, so make sure it passes all the tests provided.<br><br>We try to provide doctests that will catch errors in your solutions so you don't have to rely on the auto-grader for debugging. &nbsp;When you find that your code has passed the doctests we have provided but still does not pass the auto-grader, I'd like to hear about it. &nbsp;First, v<span style="color: rgb(51, 51, 51);">erify all the items in the&nbsp;</span><a href="https://class.coursera.org/matrix-002/wiki/tips" title="Link: https://class.coursera.org/matrix-002/wiki/tips" style="color: rgb(3, 103, 176); text-decoration: none;">Tips</a><span style="color: rgb(51, 51, 51);">&nbsp;topic:&nbsp;</span><i style="color: rgb(51, 51, 51);">What to do when my correct solution is graded incorrect?</i><span style="color: rgb(51, 51, 51);">&nbsp;</span><em style="color: rgb(51, 51, 51);">&nbsp;A checklist</em>. &nbsp;Once that is done, post in the thread <a href="https://class.coursera.org/matrix-002/forum/thread?thread_id=388" target="_blank" title="Link: https://class.coursera.org/matrix-002/forum/thread?thread_id=388">Doctests not stringent enough? &nbsp;Post here.</a><br><br>If you have a question or issue about a specific problem in a specific assignment, post within the thread for that problem. &nbsp;Feel free to post new tests you think will help your fellow students, but don't post your solution even if it is incorrect. <br><br>&nbsp;I strongly recommend not stating or hypothesizing that there is a problem in the auto-grader. &nbsp;In the vast majority of cases, that is not the case. &nbsp;Blaming the grader discourages your fellow students, dismays your staff, and puts you in a mindset in which it is difficult for you to find the bug in your code. &nbsp;Keep in mind that Coursera might take a few minutes to accurately assign your final grade.&nbsp;<br><br>I'd like to restrict the Errata forum to errors in our presentation of the material. &nbsp;If you have posted there but find that the issue discussed was not due to an error in our presentation of the material, consider deleting your post.<br><br>Next week I will assign significantly more work than this week, so do your best to get caught up this week. &nbsp;If one problem on an assignment stymies you, consider just not completing it. &nbsp;Most of the problems are not essential (aside from Vec) and you are not required to get a perfect score.<br><br>Have fun!<br>Phil</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon 16 Feb 2015  6:15 AM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Minor edit on vec.py</h3>
+                                        <div dir="auto">I found a small bug in the code for hashing Vecs. &nbsp;This bug will break hashing on a Vec whose domain (label-set) includes values of different types. &nbsp;This probably won't come up in the course, but I suggest you fix it anyway, when convenient to you. &nbsp;While we're at it, let's make a change to the pretty-printing behavior, which currently depends on <tt>hash()</tt>, to not depend on <tt>hash()</tt>, since <tt>hash()</tt> behaves differently on different versions of Python. I've made these changes to the stencil so you don't have to do anything if you haven't yet downloaded it. &nbsp;Otherwise, if you feel like making the changes to your stencil file...<br><br>I've created a patch file called <a href="https://d396qusza40orc.cloudfront.net/matrix/vecpatch.patch" target="_blank" title="null">vecpatch.patch</a>.&nbsp;If your computer runs Mac OS or any unix-y OS, it comes with a program called <tt>patch</tt>, which you can use to fix your <tt>vec.py</tt> without messing up the changes you've already made. &nbsp;<ol><li>Download <a href="https://d396qusza40orc.cloudfront.net/matrix/vecpatch.patch" target="_blank" title="null">vecpatch.patch</a> and move it into your matrix directory.</li><li>Open a console/terminal and cd to your matrix directory.</li><li>Type the command <pre><code>patch &lt; vecpatch.patch</code></pre></li></ol><br>However, If you are running Windows (and don't want to install <a href="http://gnuwin32.sourceforge.net/packages/patch.htm" target="_blank" title="Link: http://gnuwin32.sourceforge.net/packages/patch.htm">patch</a>) or don't trust the patch program, you can instead just edit your vec.py file:<br><ol><li>Replace the line <pre><code>D_list = sorted(v.D, key=hash) </code></pre>with the line <pre><code>D_list = sorted(v.D, key=repr)<br></code></pre>
+
+That is, replace <tt>hash</tt> with <tt>repr</tt> in that line.<br><br></li><li>Replace the line <pre><code>for k,v in sorted(self.f.items(), key = lambda x:x[0]):</code></pre><br> with the line <pre><code>for k,v in sorted(self.f.items(), key = lambda x:repr(x[0])):</code></pre><br>That is, replace <tt>x[0]</tt> with <tt>repr(x[0])</tt> in that line.<br></li></ol></div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Wed 11 Feb 2015  2:16 PM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Coding the Matrix, Week 1</h3>
+                                        <div dir="auto">Dear <em>Coding the Matrix</em> students:<br><br>I hope the course has been going well for you. &nbsp;By this point, you should have&nbsp;<a href="https://www.python.org/downloads/release/python-342/" title="null" target="_blank">Python 3.x.y</a>&nbsp;installed. &nbsp;You will no doubt have completed&nbsp;the&nbsp;<a href="https://class.coursera.org/matrix-002/quiz/start?quiz_id=137" title="null" target="_blank">Pre-Course Survey</a>.&nbsp;You've discovered the&nbsp;<span class="s2"><a href="https://class.coursera.org/matrix-002/wiki/view?page=syllabus" target="_blank" title="null">Syllabus</a></span>&nbsp;page, which for each week gives the assignments to begin that week, the code and data resources needed that week (all available at&nbsp;the&nbsp;<a href="http://resources.codingthematrix.com/" target="_blank" title="null">resource page</a>), and the recommended sequence of videos and problems.<br><br>I recommend against binge-watching the videos for the week. &nbsp;Instead, watch a video or two and then do some of the problems, and repeat. &nbsp;That way, what you learn from a video will be reinforced by the problems you do immediately after.<br><br>In doing the assignments, please make full use of Python and of your programming, testing, and debugging skills. &nbsp;<strong>Try out your code in the Python REPL before trying to submit it. </strong>&nbsp;You can use copy-and-paste and/or import your stencil file into the REPL. &nbsp;Make sure your code is doing what you expect, and check it against the provided doctests and against tests of your own devising. &nbsp;As you have no doubt discovered, the grader is not useful for helping you debug. &nbsp;Submit your work to the grader only after thoroughly testing your code in Python. &nbsp;Once you've submitted your code, you need to wait a bit before Coursera shows your correct grade; there's a chance Coursera will first show a zero before showing a one.<br><br>Be sure to check&nbsp;out the&nbsp;<a href="https://class.coursera.org/matrix-002/wiki/tips" target="_blank" title="Link: https://class.coursera.org/matrix-002/wiki/tips">Tips</a>&nbsp;page. &nbsp;This has information and advice on working with Python and the course auto-grader. &nbsp;Pay special attention to the material on doctests.<br><br>Spend some time at&nbsp;the&nbsp;<a href="https://class.coursera.org/matrix-002/forum/index" title="null" target="_blank">Discussion Forums</a>&nbsp;: meet your fellow students, ask questions, get or give help, and discuss linear algebra and Python.&nbsp;We will create a thread for each problem assigned in the course; if you have questions or comments&nbsp;about a problem, please post within the appropriate thread. &nbsp;Please do&nbsp;<em>not&nbsp;</em>post your solutions, here or elsewhere. &nbsp;(Instead, we welcome example input-output pairs to help your fellow students test their code.) &nbsp; And please restrict your posts in these sub-fora&nbsp;t<strong></strong>o facts and questions. &nbsp;If you want to express your opinion about a problem or something else in the course, please do so in the sub-forum&nbsp;<em>Feedback</em>.&nbsp;<br><br>In this week, you will learn about vectors and the basic operations on them. &nbsp;You will learn how to form lines and line segments using sets of vectors, and you will see some simple applications. &nbsp;There are a few homework problems and a lab. &nbsp;In addition, you will implement our Vec class, which we will often (but not always) use for representing vectors. &nbsp;Because future assignments will rely so heavily on Vec, you really need to get it to work completely. &nbsp;It is for this reason that you must score 80% or higher on the Vector Class assignment in order to receive a Statement of Accomplishment. &nbsp;The doctests in the stencil for this assignment, <tt>vec.py</tt>, are there to help you test and debug your implementation.<br><br>This is the week we really get started with linear algebra. &nbsp;Have fun!<br><br>Phil</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Mon  9 Feb 2015  6:00 AM PST</div>
+                                    </div>
+            </div>
+                                <div style="border-bottom:1px solid #f0f0f0;padding-top:16px;padding-bottom:16px;">
+                <div style="overflow:hidden;margin-top:-5px;padding-right:25px;">
+                                        <h3>Course Philosophy</h3>
+                                        <div dir="auto">You have a superpower.
+<br>
+<br>You already know that being able to code
+<br>
+<br><ul><li>gives you the ability to create new and useful artifacts with just your mind and your fingers,</li>
+<br><li>allows you to have more control of your world as more and more of it becomes digital,</li>
+<br><li>is just fun.</li></ul>
+<br>
+<br>I believe it has another benefit: it can help you understand math.
+<br>
+<br>Being able to turn procedural ideas into code and run the code on concrete examples give you a great advantage in developing and reinforcing your understanding of mathematical concepts.
+<br>
+<br>You can learn by <i>doing</i>.
+<br>
+<br>Listening to lectures, watching an instructor work through a derivation, working through numerical examples by hand -- these are helpful but can only take you so far. Linear algebra really comes alive when you use it as a tool to accomplish something.
+<br>
+<br>So as you watch the lecture videos, keep that in mind: the real learning happens when you roll up your sleeves and have a conversation with Python, for that is when you make these mathematical concepts your own.
+<br>
+<br>My hope is that the conversation won't end when the course does, that you will continue to find ways to use vectors and matrices in your coding.
+<br>
+<br>Because the course is just eight weeks long, I won't be able to go in depth into some of the great ideas that build on vectors and matrices, such as wavelets, principal components analysis, linear programming, eigenvalues, and Pagerank. I plan to offer a very short follow-on course that covers these more advanced topics.
+<br>
+<br>Phil Klein</div>
+                                        <div style="text-align:right;padding-top:10px;font-style:italic;">Sun  1 Feb 2015  7:15 AM PST</div>
+                                    </div>
+            </div>
+            </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script></div><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div style="position:absolute;top:0px;left:0px;width:100%;height:100%;background:#f5f5f5;padding-top:5%;"><div id="coursera-loading-nojs" style="text-align:center; margin-bottom:10px;display:none;"><div>Please use a <a href="https://learner.coursera.help/hc/articles/201522945-Recommended-Software-and-Devices">modern browser </a> with JavaScript enabled to use Coursera.</div><div id="get-browser-zh" style="display:none;">请下载现代的浏览器（<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">IE11</a>或<a href="https://www.google.com/intl/zh-CN/chrome/browser/">Google Chrome</a>）来使用Coursera。</div></div><div><span id="coursera-loading-js" style="display: none; padding-left:45%; font-size: 14px; line-height: 1.428571429; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">loading &nbsp;&nbsp;<img src="https://dw0ugk4msqulk.cloudfront.net/images/icons/loading.gif"></span></div><noscript><div style="text-align:center; margin-bottom:10px;">Please use a <a href="https://learner.coursera.help/hc/articles/201522945-Recommended-Software-and-Devices">modern browser </a> with JavaScript enabled to use Coursera.</div></noscript></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+    <script src='https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/js/vendor/jquery.v1-7.js' ></script>
+      <script src='https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/spark/core/js/loadOrRefreshMathJax.js' ></script>
+  <script src="https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/js/vendor/require.v2-1-1.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/385a154cdc58d9ca735efde1aee45020f4886fb0/" data-version="385a154cdc58d9ca735efde1aee45020f4886fb0" data-timestamp='1444145420392' data-debug='0' data-locale="en" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":89901,\"email_address\":\"bicepjai@gmail.com\",\"full_name\":\"Jayaram Prabhu\",\"locale\":null,\"timezone\":\"America\\\/Los_Angeles\",\"access_group_id\":\"4\",\"registration_time\":\"1420846348\",\"last_access_time\":\"1444281523\",\"last_access_ip\":\"73.185.32.138\",\"signature_track_register_time\":\"1423522158\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"1\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"Jayaram\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":4,\"verified_quizzes\":[],\"submitted_quizzes\":[\"47\",\"51\",\"55\",\"59\",\"71\",\"93\",\"135\",\"137\",\"139\",\"141\",\"185\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":null,\"flexjoin_last_chance_modal\":null}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":974150,\"isPrivate\":false,\"type\":\"public\",\"name\":\"Coding the Matrix: Linear Algebra through Computer Science Applications\",\"instructor\":\"Philip Klein\",\"sessionName\":\"matrix-002\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"matrix\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"brown\",\"signatureTrackStatus\":{\"signature_track_enabled\":1},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/www.coursera.org\\\/login?post_redirect=https%3A%2F%2Fwww.coursera.org%2Flogin%3Fuser_action%3Dclass%26course_id%3D974150%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Fmatrix-002%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/www.coursera.org\\\/signup?enroll_cid=974150&enroll_sn=matrix&enroll_n=Coding the Matrix: Linear Algebra through Computer Science Applications\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/matrix\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/www.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Fmatrix\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/matrix-002\\\/\",\"search\":true,\"hideWiki\":false,\"aceStartRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceEndRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamStartDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamEndDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":null,\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":0,\"honorCodeExtraText\":\"\",\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":false}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Announcements\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"Course Overview\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"overview\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"syllabus\"},{\"name\":\"FAQ\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"faq\"},{\"name\":\"Software Environment\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"software-environment\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Video Lectures\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Programming Assignments\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"assignment:index\"},{\"name\":\"Discussion Forums\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"Reflections\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"reflections\"},{\"name\":\"Errata\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"errata\"},{\"name\":\"Tips\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"tips\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"About Us\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"aboutus\"},{\"name\":\"Surveys \",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=survey\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = true;
+</script></body></html>

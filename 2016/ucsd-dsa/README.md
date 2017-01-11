@@ -1,0 +1,1 @@
+This repo contains solutions for "Master Algorithmic Programming Techniques" 2016 june session. https://www.coursera.org/specializations/data-structures-algorithms This was created for my own reference on solutions and also to help people looking for references which makes sense :) I can't guarantee correctness. But if you find errors please do let me know.
