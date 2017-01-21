@@ -34,51 +34,40 @@ public class Clustering {
 
    // A class to represent a subset for union-find
    public static class UF {
-      int[] parents;
-      int[] ranks;
+      int parent, rank;
+   };
 
-      UF(int n) {
-         this.parents = new int[n];
-         this.ranks = new int[n];
+   static UF sets[];
 
-         // Create V sets with single elements
-         for (int u = 0; u < n; ++u) {
-            this.parents[u] = u;
-            this.ranks[u] = 0;
-         }
+   // Find set of an element i
+   // (uses path compression technique)
+   private static int find(int i) {
+      // find root and make root as parent of i (path compression)
+      if (sets[i].parent != i)
+         sets[i].parent = find(sets[i].parent);
+
+      return sets[i].parent;
+   }
+
+   // union of two sets of x and y
+   // (uses union by rank)
+   private static void union(int x, int y) {
+      int xroot = find(x);
+      int yroot = find(y);
+
+      // Attach smaller rank tree under root of high rank tree
+      // (Union by Rank)
+      if (sets[xroot].rank < sets[yroot].rank)
+         sets[xroot].parent = yroot;
+      else if (sets[xroot].rank > sets[yroot].rank)
+         sets[yroot].parent = xroot;
+
+      // If ranks are same, then make one as root and increment
+      // its rank by one
+      else {
+         sets[yroot].parent = xroot;
+         sets[xroot].rank++;
       }
-
-      // Find set of an element i
-      // (uses path compression technique)
-      public int find(int i) {
-         // find root and make root as parent of i (path compression)
-         if (this.parents[i] != i)
-            this.parents[i] = find(this.parents[i]);
-
-         return this.parents[i];
-      }
-
-      // union of two sets of x and y
-      // (uses union by rank)
-      public void union(int x, int y) {
-         int xroot = this.find(x);
-         int yroot = this.find(y);
-
-         // Attach smaller rank tree under root of high rank tree
-         // (Union by Rank)
-         if (this.ranks[xroot] < this.ranks[yroot])
-            this.parents[xroot] = yroot;
-         else if (this.ranks[xroot] > this.ranks[yroot])
-            this.parents[yroot] = xroot;
-
-         // If ranks are same, then make one as root and increment
-         // its rank by one
-         else {
-            this.parents[yroot] = xroot;
-            this.ranks[xroot]++;
-         }
-      }
-
    }
 
    private static double clustering(int[] x, int[] y, int k) {
@@ -110,20 +99,28 @@ public class Clustering {
       // System.out.println(edges);
 
       // Creating sets
-      UF uf = new UF(n);
+      sets = new UF[n];
+      for (int i = 0; i < n; i++)
+         sets[i] = new UF();
+
+      // Create V sets with single elements
+      for (int u = 0; u < n; ++u) {
+         sets[u].parent = u;
+         sets[u].rank = 0;
+      }
 
       // kruskals
       int i = 0;
       while (!edges.isEmpty()) {
          Edge e = edges.poll();
-         int u_root = uf.find(e.u);
-         int v_root = uf.find(e.v);
+         int u_root = find(e.u);
+         int v_root = find(e.v);
          if (u_root != v_root) {
-            uf.union(e.u, e.v);
+            union(e.u, e.v);
             // n-1 edge is the shortest edge connecting 2 clusters
             // n-1 and n-2 edge are the shortest edges connecting 3 clusters
             // and so on
-            if (i++ == n - k) {
+            if (i++ == n-k) {
                result = e.distance;
             }
          }
