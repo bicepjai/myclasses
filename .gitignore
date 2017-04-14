@@ -448,5 +448,8 @@ Thumbs.db
 ######################
 audit/
 lectures/
-######################
+###### virtualbox files ############
 *.ova
+###### non-git classes ############
+calcsing_007/
+
