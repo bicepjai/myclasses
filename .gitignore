@@ -445,3 +445,8 @@ target/
 .Trashes
 ehthumbs.db
 Thumbs.db
+######################
+audit/
+lectures/
+######################
+*.ova
