@@ -1,3 +1,11 @@
+# personal ============================================================
+2015/calcsing_007/
+2015/audit/
+lectures/
+homlwsltf/
+2017/cs20si/data/MNIST_data/
+2017/cs20si/data/notMNIST-to-MNIST/
+
 # custom ============================================================
 *.zip
 
@@ -88,7 +96,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# py ============================================================
+# python ============================================================
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -180,6 +188,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.npy
 
 # java ============================================================
 *.class
@@ -417,8 +427,7 @@ target/
 *.o
 *.so
 
-# Packages #
-############
+# Packages ============================================================
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
@@ -430,14 +439,12 @@ target/
 *.tar
 *.zip
 
-# Logs and databases #
-######################
+# Logs and databases ============================================================
 *.log
 *.sql
 *.sqlite
 
-# OS generated files #
-######################
+# OS generated files ============================================================
 .DS_Store
 .DS_Store?
 ._*
@@ -445,14 +452,11 @@ target/
 .Trashes
 ehthumbs.db
 Thumbs.db
-######################
-audit/
-lectures/
-###### virtualbox files ############
+
+# virtualbox files  ============================================================
 *.ova
-###### non-git classes ############
-calcsing_007/
-############ ROS ################
+
+# ROS  ============================================================
 .pydevproject
 cmake_install.cmake
 
