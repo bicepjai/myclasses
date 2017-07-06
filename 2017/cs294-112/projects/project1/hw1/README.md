@@ -13,3 +13,8 @@ In `experts/`, the provided expert policies are:
 * Walker2d-v1.pkl
 
 The name of the pickle file corresponds to the name of the gym environment.
+
+Waiting for completing 2 courses
+1. MITx: 18.031x Introduction to Differential Equations (completed)
+2. MITx: 18.03L Transfer Functions and the Laplace Transform (currently ongoing)
+ON-HOLD
