@@ -34,22 +34,22 @@ def softmax(x):
     if len(x.shape) > 1:
         # Matrix
         ### YOUR CODE HERE
-        raised_to_exp = np.exp(x - np.max(x, axis=1, keepdims=True)).astype(np.float64)
-        # print("raised_to_exp",raised_to_exp)
+        x = np.exp(x - np.max(x, axis=1))
+        # print("exp_x",x)
 
-        total_sum = np.sum(raised_to_exp, axis=1, keepdims=True).astype(np.float64)
+        total_sum = np.sum(x, axis=1, keepdims=True)
         # print("total_sum",total_sum)
-        x = raised_to_exp / total_sum
+        x = x / total_sum
         ### END YOUR CODE
     else:
         # Vector
         ### YOUR CODE HERE
-        raised_to_exp = np.exp(x - np.max(x, keepdims=True)).astype(np.float64)
-        # print("raised_to_exp",raised_to_exp)
+        x = np.exp(x - np.max(x, axis=0)).astype(np.float64)
+        # print("exp_x",x)
 
-        total_sum = np.sum(raised_to_exp).astype(np.float64)
+        total_sum = np.sum(x, axis=0).astype(np.float64)
         # print("total_sum",total_sum)
-        x = raised_to_exp / total_sum
+        x = x / total_sum
         ### END YOUR CODE
 
     # print("final x",x)
@@ -92,8 +92,20 @@ def test_softmax():
     """
     print "Running your tests..."
     ### YOUR CODE HERE
-    # raise NotImplementedError
-    pass
+    test = softmax(np.array([[10000, 10000, 10000, 10000]]))
+    print test
+    ans = np.array([0.25, 0.25, 0.25, 0.25])
+    assert np.allclose(test, ans, rtol=1e-05, atol=1e-06)
+
+    # test if dimension are consistent + softmax stable version
+    # test important --> allow me to see that I needed to add keepdims=True in line 36
+    print "Running your tests..."
+    test = softmax(np.array([[10000, 10000, 10000, 10000],
+                             [10000, 10000, 10000, 10000]]))
+    print test
+    ans = np.array([[0.25, 0.25, 0.25, 0.25],
+                    [0.25, 0.25, 0.25, 0.25]])
+    assert np.allclose(test, ans, rtol=1e-05, atol=1e-06)
     ### END YOUR CODE
 
 

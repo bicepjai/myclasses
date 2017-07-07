@@ -17,9 +17,9 @@ def sigmoid(x):
     # print(x)
     # print("----------------------------")
     ### YOUR CODE HERE
-    denom = 1 + np.exp(-x)
+    denom = 1. + np.exp(-x)
     # print("denom",denom)
-    s = 1 / denom
+    s = 1. / denom
     # print("s",s)
     ### END YOUR CODE
 
@@ -40,7 +40,7 @@ def sigmoid_grad(s):
     """
 
     ### YOUR CODE HERE
-    ds = s * (1 - s)
+    ds = s * (1. - s)
     ### END YOUR CODE
 
     return ds
@@ -78,8 +78,23 @@ def test_sigmoid():
     print "Running your tests..."
     ### YOUR CODE HERE
     # raise NotImplementedError
-    pass
-    ### END YOUR CODE
+    ### YOUR CODE HERE
+    x = np.array([[100, 100], [-100, -100]])
+    f = sigmoid(x)
+    g = sigmoid_grad(f)
+    f_ans = np.array([
+        [1, 1],
+        [0, 0]])
+    assert np.allclose(f, f_ans, rtol=1e-05, atol=1e-06)
+    g_ans = np.array([
+        [0, 0],
+        [0, 0]])
+    assert np.allclose(g, g_ans, rtol=1e-05, atol=1e-06)
+
+    # testing sigmoid(-x) == sigmoid(1-x)
+    f = sigmoid(-x)
+    f_ = sigmoid(1-x)
+    assert np.allclose(f, f_, rtol=1e-05, atol=1e-06)    ### END YOUR CODE
 
 
 if __name__ == "__main__":

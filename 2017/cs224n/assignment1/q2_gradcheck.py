@@ -33,16 +33,19 @@ def gradcheck_naive(f, x):
         ### YOUR CODE HERE:
         old_x_ix = x[ix]
         x[ix] = old_x_ix - h
+        random.setstate(rndstate)
         fx_before, _ = f(x)
 
         # print("x",x)
         # print("fx_before",fx_before)
 
         x[ix] = old_x_ix + h
+        random.setstate(rndstate)
         fx_after, _ = f(x)
         # print("fx_after",fx_after)
 
-        numgrad = (fx_after - fx_before)/(2*h)
+        numgrad = (fx_after - fx_before) / (2 * h)
+        x[ix] = old_x_ix
         ### END YOUR CODE
 
         # Compare gradients
@@ -85,8 +88,9 @@ def your_sanity_checks():
     """
     print "Running your sanity checks..."
     ### YOUR CODE HERE
-    # raise NotImplementedError
-    pass
+    from q2_sigmoid import sigmoid, sigmoid_grad
+    sig = lambda x: (sigmoid(x), sigmoid_grad(sigmoid(x)))
+    gradcheck_naive(sig, np.array(123.456))      # scalar test
     ### END YOUR CODE
 
 

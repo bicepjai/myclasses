@@ -15,7 +15,8 @@ def normalizeRows(x):
     """
 
     ### YOUR CODE HERE
-    x /= np.linalg.norm(x, axis=1, keepdims=True)
+    # x /= np.linalg.norm(x, axis=1, keepdims=True)
+    x = x / np.sqrt(np.sum(x ** 2, keepdims=True, axis=1))
     ### END YOUR CODE
 
     return x
@@ -60,15 +61,15 @@ def softmaxCostAndGradient(predicted, target, outputVectors, dataset):
     ### YOUR CODE HERE
     vc = predicted
     uo_idx = target
-    uw_vc = np.dot(outputVectors, vc) # v_w
+    uw_vc = vc.dot(outputVectors.T) # v_w
     y_hat = softmax(uw_vc).reshape(-1, 1)
+
+    # cost
+    cost = -np.log(y_hat[uo_idx])
 
     # gradient for softmax
     y_hat_minus_y = y_hat # w != o
     y_hat_minus_y[uo_idx] -= 1. # w = o
-
-    # cost
-    cost = -np.log(y_hat[uo_idx])
 
     # gradient w.r.t to uw
     grad = np.dot(y_hat_minus_y, vc.reshape(1, -1))
@@ -128,7 +129,7 @@ def negSamplingCostAndGradient(predicted, target, outputVectors, dataset,
     sigmoid_neg_uk_vc = [sigmoid(scalar) for scalar in neg_uk_vc]
 
     # cost that is contributed by the target word
-    cost = 0
+    cost = 0.0
     cost -= np.log(sigmoid_uo_vc)
     # cost that is contributed by the negative sampled word
     cost -= sum([np.log(scalar) for scalar in sigmoid_neg_uk_vc])
@@ -145,9 +146,10 @@ def negSamplingCostAndGradient(predicted, target, outputVectors, dataset,
     grad[uo_idx] += vc * (sigmoid_uo_vc - 1.)
     # gradient dJ_duk contributed by negative samples
     for idx, neg_sample_idx in enumerate(neg_sample_indices):
-        grad[neg_sample_idx] -= (sigmoid_neg_uk_vc[idx] - 1) * vc
+        grad[neg_sample_idx] -= (sigmoid_neg_uk_vc[idx] - 1.) * vc
     ### END YOUR CODE
 
+    return cost, gradPred, grad
 
 def skipgram(currentWord, C, contextWords, tokens, inputVectors, outputVectors,
              dataset, word2vecCostAndGradient=softmaxCostAndGradient):
@@ -178,12 +180,13 @@ def skipgram(currentWord, C, contextWords, tokens, inputVectors, outputVectors,
     gradOut = np.zeros(outputVectors.shape)
 
     ### YOUR CODE HERE
-    predicted = inputVectors[tokens[currentWord]]
+    center_w = tokens[currentWord]
+    predicted = inputVectors[center_w]
     for contextWord in contextWords:
         target = tokens[contextWord]
         current_cost, gradPred, grad = word2vecCostAndGradient(predicted, target,
                                                         outputVectors, dataset)
-        gradIn[tokens[currentWord]] += gradPred.reshape(-1)
+        gradIn[center_w] += gradPred.reshape(-1)
         gradOut += grad
         cost += current_cost
     ### END YOUR CODE
@@ -270,35 +273,31 @@ def test_word2vec():
     dummy_vectors = normalizeRows(np.random.randn(10,3))
     dummy_tokens = dict([("a",0), ("b",1), ("c",2),("d",3),("e",4)])
     print "==== Gradient check for skip-gram ===="
-    print "--- skip-gram with softmaxCostAndGradient ----"
     gradcheck_naive(lambda vec: word2vec_sgd_wrapper(
         skipgram, dummy_tokens, vec, dataset, 5, softmaxCostAndGradient),
         dummy_vectors)
-    print "--- skip-gram with negSamplingCostAndGradient ----"
     gradcheck_naive(lambda vec: word2vec_sgd_wrapper(
         skipgram, dummy_tokens, vec, dataset, 5, negSamplingCostAndGradient),
         dummy_vectors)
     print "\n==== Gradient check for CBOW      ===="
-    print "--- CBOW with softmaxCostAndGradient ----"
     gradcheck_naive(lambda vec: word2vec_sgd_wrapper(
         cbow, dummy_tokens, vec, dataset, 5, softmaxCostAndGradient),
         dummy_vectors)
-    print "--- CBOW with negSamplingCostAndGradient ----"
     gradcheck_naive(lambda vec: word2vec_sgd_wrapper(
         cbow, dummy_tokens, vec, dataset, 5, negSamplingCostAndGradient),
         dummy_vectors)
-    #
-    # print "\n=== Results ==="
-    # print skipgram("c", 3, ["a", "b", "e", "d", "b", "c"],
-    #     dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset)
-    # print skipgram("c", 1, ["a", "b"],
-    #     dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset,
-    #     negSamplingCostAndGradient)
-    # print cbow("a", 2, ["a", "b", "c", "a"],
-    #     dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset)
-    # print cbow("a", 2, ["a", "b", "a", "c"],
-    #     dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset,
-    #     negSamplingCostAndGradient)
+
+    print "\n=== Results ==="
+    print skipgram("c", 3, ["a", "b", "e", "d", "b", "c"],
+        dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset)
+    print skipgram("c", 1, ["a", "b"],
+        dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset,
+        negSamplingCostAndGradient)
+    print cbow("a", 2, ["a", "b", "c", "a"],
+        dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset)
+    print cbow("a", 2, ["a", "b", "a", "c"],
+        dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset,
+        negSamplingCostAndGradient)
 
 
 if __name__ == "__main__":
