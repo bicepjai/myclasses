@@ -49,7 +49,8 @@ def getSentenceFeatures(tokens, wordVectors, sentence):
     sentVector = np.zeros((wordVectors.shape[1],))
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    sentVector = sum([wordVectors[tokens[word]]for word in sentence])
+    sentVector /= len(sentence)
     ### END YOUR CODE
 
     assert sentVector.shape == (wordVectors.shape[1],)
@@ -63,7 +64,7 @@ def getRegularizationValues():
     """
     values = None   # Assign a list of floats in the block below
     ### YOUR CODE HERE
-    raise NotImplementedError
+    values = [10 ** i for i in np.random.uniform(-10,0,10)]
     ### END YOUR CODE
     return sorted(values)
 
@@ -87,7 +88,10 @@ def chooseBestModel(results):
     bestResult = None
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    best_test = 0
+    for d in results:
+        if d["train"] > best_test:
+            bestResult = d
     ### END YOUR CODE
 
     return bestResult
@@ -150,8 +154,9 @@ def main(args):
     tokens = dataset.tokens()
     nWords = len(tokens)
 
+    model_name = "skipgram"
     if args.yourvectors:
-        _, wordVectors, _ = load_saved_params()
+        _, wordVectors, _ = load_saved_params(model_name)
         wordVectors = np.concatenate(
             (wordVectors[:nWords,:], wordVectors[nWords:,:]),
             axis=1)
