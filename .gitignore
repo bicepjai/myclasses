@@ -6,14 +6,18 @@ lectures/
 
 # class specific =================================================
 
-2015/calcsing_007/
-homlwsltf/
+2017/cs20si/data/text8
+*.tsv
+2017/cs20si/data/MNIST_data/
 2017/cs20si/data/MNIST_data/
 2017/cs20si/data/notMNIST-to-MNIST/
 2017/cs224n/assignment1/utils/datasets/stanfordSentimentTreebank/
 2017/cs224n/assignment1/utils/datasets/glove.6B*
 2017/cs224n/assignment1/q4_*.png
 2017/cs224n/assignment1/q4_*.txt
+
+2015/calcsing_007/
+homlwsltf/
 
 # custom ============================================================
 *.zip
