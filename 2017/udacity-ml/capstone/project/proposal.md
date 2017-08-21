@@ -35,9 +35,9 @@ Both training and test data sets are provided via two different files. One (trai
 
 Dataset snippets
 
-![train data](https://imagebin.ca/v/3XcwwnTghMJf)
+![train data](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/train_df.png)
 
-![test data](https://imagebin.ca/v/3Xcx82LfZhzw)
+![test data](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/test_df.png)
 
 There are some missing text for Text attribute on train (1 row) and test (6 rows). Total Corpus has 45721035 words with vocabulary of 228389 words. After pre-processing some statistics on the length of the text in each train and test data rows
 
@@ -122,7 +122,7 @@ Submissions are evaluated on Multi Class Log Loss between the predicted probabil
 
 $log loss = -\frac{1}{N}\sum_{i=1}^N\sum_{j=1}^My_{i,j}\log(p_{i,j})$
 
-![multi class log loss](https://imagebin.ca/v/3Xcy52v4hUeK)
+![multi class log loss](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/log_loss.png)
 
 
 where $N$ is the number of observations, M is the number of class labels, log is the natural logarithm, y_{i,j} is 1 if observation i is in class j and 0 otherwise, and p_{i,j} is the predicted probability that observation i is in class j.
