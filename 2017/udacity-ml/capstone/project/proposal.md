@@ -35,7 +35,11 @@ Both training and test data sets are provided via two different files. One (trai
 
 Dataset snippets
 
+train data frame
+
 ![train data](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/train_df.png)
+
+test data frame
 
 ![test data](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/test_df.png)
 
@@ -119,8 +123,6 @@ There are no benchmarks available other than kaggle leadership board ranking. I 
 ### Evaluation Metrics
 
 Submissions are evaluated on Multi Class Log Loss between the predicted probability and the observed target. Multi Class Log Loss is the multi-class version of the Logarithmic Loss metric. Each observation is in one class and for each observation, I will submit a predicted probability for each class. The metric is negative the log likelihood of the model that says each test observation is chosen independently from a distribution that places the submitted probability mass on the corresponding class, for each observation.
-
-$log loss = -\frac{1}{N}\sum_{i=1}^N\sum_{j=1}^My_{i,j}\log(p_{i,j})$
 
 ![multi class log loss](https://github.com/bicepjai/myclasses/blob/master/2017/udacity-ml/capstone/project/log_loss.png)
 
