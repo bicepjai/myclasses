@@ -27,10 +27,24 @@ In this competition, I have to develop algorithms to classify genetic mutations 
 
 Both training and test data sets are provided via two different files. One (training/test_variants) provides the information about the genetic mutations, whereas the other (training/test_text) provides the clinical evidence (text) that our human experts used to classify the genetic mutations. Both are linked via the ID field. Therefore the genetic mutation (row) with ID=15 in the file training_variants, was classified using the clinical evidence (text) from the row with ID=15 in the file training_text. Finally, to make it more exciting, some of the test data is machine-generated to prevent hand labeling. I have to submit all the results of the classification algorithm, and the machine-generated samples will be ignored. The following provides the file descriptions.
 
-	1. training_variants - a comma separated file containing the description of the genetic mutations used for training. Fields are ID (the id of the row used to link the mutation to the clinical evidence), Gene (the gene where this genetic mutation is located), Variation (the aminoacid change for this mutations), Class (1-9 the class this genetic mutation has been classified on)
-	2. training_text - a double pipe (||) delimited file that contains the clinical evidence (text) used to classify genetic mutations. Fields are ID (the id of the row used to link the clinical evidence to the genetic mutation), Text (the clinical evidence used to classify the genetic mutation)
-	3. test_variants - a comma separated file containing the description of the genetic mutations used for training. Fields are ID (the id of the row used to link the mutation to the clinical evidence), Gene (the gene where this genetic mutation is located), Variation (the aminoacid change for this mutations)
-	4. test_text - a double pipe (||) delimited file that contains the clinical evidence (text) used to classify genetic mutations. Fields are ID (the id of the row used to link the clinical evidence to the genetic mutation), Text (the clinical evidence used to classify the genetic mutation)
+	1. training_variants - a comma separated file containing the description of the genetic mutations used
+	   for training. Fields are ID (the id of the row used to link the mutation to the clinical evidence),
+	   Gene (the gene where this genetic mutation is located), Variation (the aminoacid change for this
+	   mutations), Class (1-9 the class this genetic mutation has been classified on)
+
+	2. training_text - a double pipe (||) delimited file that contains the clinical evidence (text) used to
+	   classify genetic mutations. Fields are ID (the id of the row used to link the clinical evidence to
+		 the genetic mutation), Text (the clinical evidence used to classify the genetic mutation)
+
+	3. test_variants - a comma separated file containing the description of the genetic mutations used for
+	   training. Fields are ID (the id of the row used to link the mutation to the clinical evidence),
+		 Gene (the gene where this genetic mutation is located), Variation (the aminoacid change
+		 for this mutations)
+
+	4. test_text - a double pipe (||) delimited file that contains the clinical evidence (text) used to
+	   classify genetic mutations. Fields are ID (the id of the row used to link the clinical evidence
+		 to the genetic mutation), Text (the clinical evidence used to classify the genetic mutation)
+
 	5. submissionSample - a sample submission file in the correct format
 
 Dataset snippets
@@ -102,7 +116,7 @@ Word Vectors took the NLP community by storm with its ability to be used in deep
 	6. Very Deep Convolutional Networks for Text Classification [8]
 	7. Character-level Convolutional Networks for Text Classification [9]
 	8. Distributed Representations of Sentences and Documents [10]
-	9. Semantic Compositionality through Recursive Matrix-Vector Spaces [11]
+	9. Medical Text Classification using Convolutional Neural Networks [11]
 
 More research papers that will be referenced or used as influence for new models in the project are
 
@@ -112,7 +126,9 @@ More research papers that will be referenced or used as influence for new models
 	4. Neural Machine Translation in Linear Time [15]
 	5. Generative and Discriminative Text Classification with Recurrent Neural Networks [16]
 	6. Combination of Convolutional and Recurrent Neural Network for Sentiment Analysis of Short Texts [17]
-	7. Ensemble Application of Convolutional and Recurrent Neural Networks for Multi-label Text Categorization [18]
+	7. Ensemble Application of Convolutional and Recurrent Neural Networks for
+	   Multi-label Text Categorization [18]
+	10. CNNs for Text Categorization: Shallow Word-level vs. Deep Character-level [22]
 
 Finally, I will create new models based on intuitions and influences gathered from this comprehensive study on text classification deep learning models.
 
@@ -169,7 +185,7 @@ After word-vectors are created, I will be able to implement all the above discus
 
 [10] [Distributed Representations of Sentences and Documents](https://cs.stanford.edu/~quocle/paragraph_vector.pdf)
 
-[11] [Semantic Compositionality through Recursive Matrix-Vector Spaces](https://nlp.stanford.edu/pubs/SocherHuvalManningNg_EMNLP2012.pdf)
+[11] [Medical Text Classification using Convolutional Neural Networks](https://arxiv.org/pdf/1704.06841.pdf)
 
 [12] [Comparative Study of CNN and RNN for Natural Language Processing](https://arxiv.org/pdf/1702.01923.pdf)
 
@@ -191,3 +207,5 @@ After word-vectors are created, I will be able to implement all the above discus
 [20] [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
 
 [21] [Personalized Medicine: Redefining Cancer Treatment](https://www.kaggle.com/c/msk-redefining-cancer-treatment)
+
+[22] [Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level](https://arxiv.org/pdf/1609.00718.pdf)

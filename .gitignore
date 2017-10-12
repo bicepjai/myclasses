@@ -1,26 +1,42 @@
-# personal ============================================================
-2015/audit/
-2016/audit/
-lectures/
-2016/audit/
 
-# class specific =================================================
 
-*.pdf
+# 2017 classes =================================================
 2017/cs20si/data/text8
-*.tsv
 2017/cs20si/data/MNIST_data/
 2017/cs20si/data/MNIST_data/
 2017/cs20si/data/notMNIST-to-MNIST/
+2017/cs20si/assignments/style_transfer/outputs/
+2017/cs20si/assignments/style_transfer/checkpoints/
+2017/cs20si/assignments/style_transfer/graphs/
+2017/cs20si/assignments/style_transfer/content/
+2017/cs20si/assignments/style_transfer/styles/
+
 2017/cs224n/assignment1/utils/datasets/stanfordSentimentTreebank/
 2017/cs224n/assignment1/utils/datasets/glove.6B*
 2017/cs224n/assignment1/q4_*.png
 2017/cs224n/assignment1/q4_*.txt
+
+2017/udacity-ml/*/data
+
+2017/homlwsltf/
+2017/educator-statistics/
+
+# 2016 classes ============================================================
+2016/audit/
+
+# 2015 classes ============================================================
+2015/audit/
 2015/calcsing_007/
-homlwsltf/
+
 
 # custom ============================================================
+lectures/
+
 *.zip
+*.pdf
+*.tsv
+*.npz
+*.mat
 
 # c++ ============================================================
 # Prerequisites
