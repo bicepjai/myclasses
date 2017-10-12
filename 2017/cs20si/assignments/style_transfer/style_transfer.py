@@ -13,18 +13,24 @@ import time
 
 import numpy as np
 import tensorflow as tf
+import tqdm
 
 import vgg_model
 import utils
 
 # parameters to manage experiments
-STYLE = 'guernica'
-CONTENT = 'deadpool'
+STYLE = 'seurat_a' # guernica,harlenquin,pattern,starry_might
+CONTENT = 'jaymich' # deadpool, nivi
 STYLE_IMAGE = 'styles/' + STYLE + '.jpg'
 CONTENT_IMAGE = 'content/' + CONTENT + '.jpg'
 IMAGE_HEIGHT = 250
 IMAGE_WIDTH = 333
 NOISE_RATIO = 0.6 # percentage of weight of the noise for intermixing with the content image
+
+CONTENT_WEIGHT = 0.01
+STYLE_WEIGHT = 1
+
+LEARNING_RATE = 1.0
 
 # Layers used for style features. You can change this.
 STYLE_LAYERS = ['conv1_1', 'conv2_1', 'conv3_1', 'conv4_1', 'conv5_1']
@@ -33,7 +39,7 @@ W = [0.5, 1.0, 1.5, 3.0, 4.0] # give more weights to deeper layers.
 # Layer used for content features. You can change this.
 CONTENT_LAYER = 'conv4_2'
 
-ITERS = 300
+ITERS = 1000 # 300
 LR = 2.0
 
 MEAN_PIXELS = np.array([123.68, 116.779, 103.939]).reshape((1,1,1,3))
@@ -62,13 +68,14 @@ def _create_content_loss(p, f):
         the content loss
 
     """
-    pass
+    return tf.reduce_sum(tf.square(p - f)) / (4 * p.size)
 
 def _gram_matrix(F, N, M):
     """ Create and return the gram matrix for tensor F
         Hint: you'll first have to reshape F
     """
-    pass
+    F = tf.reshape(F, (M, N))
+    return tf.matmul(tf.transpose(F), F)
 
 def _single_style_loss(a, g):
     """ Calculate the style loss at a certain layer
@@ -82,7 +89,11 @@ def _single_style_loss(a, g):
         2. we'll use the same coefficient for style loss as in the paper
         3. a and g are feature representation, not gram matrices
     """
-    pass
+    N = a.shape[3] # filters
+    M = a.shape[1] * a.shape[2] # height x width
+    A = _gram_matrix(a, N, M)
+    G = _gram_matrix(g, N, M)
+    return tf.reduce_sum(tf.square(G - A)) / (2 * N * N * M * M)
 
 def _create_style_loss(A, model):
     """ Return the total style loss
@@ -92,7 +103,9 @@ def _create_style_loss(A, model):
     
     ###############################
     ## TO DO: return total style loss
-    pass
+    
+    return sum([W[i] * E[i] for i in range(n_layers)])
+
     ###############################
 
 def _create_losses(model, input_image, content_image, style_image):
@@ -110,7 +123,7 @@ def _create_losses(model, input_image, content_image, style_image):
         ##########################################
         ## TO DO: create total loss. 
         ## Hint: don't forget the content loss and style loss weights
-        
+        total_loss = STYLE_WEIGHT * style_loss + CONTENT_WEIGHT * content_loss
         ##########################################
 
     return content_loss, style_loss, total_loss
@@ -119,26 +132,46 @@ def _create_summary(model):
     """ Create summary ops necessary
         Hint: don't forget to merge them
     """
-    pass
+    with tf.name_scope('summaries'):
+        tf.summary.scalar("total_loss",model['total_loss'])
+        tf.summary.histogram("total_loss",model['total_loss'])
+        tf.summary.scalar("content_loss",model['content_loss'])
+        tf.summary.histogram("content_loss",model['content_loss'])
+        tf.summary.scalar("style_loss",model['style_loss'])
+        tf.summary.histogram("style_loss",model['style_loss'])
+        return tf.summary.merge_all()
 
 def train(model, generated_image, initial_image):
     """ Train your model.
     Don't forget to create folders for checkpoints and outputs.
     """
+    # https://stackoverflow.com/questions/37337728/tensorflow-internalerror-blas-sgemm-launch-failed
+    if 'session' in locals() and session is not None:
+        print('Close interactive session')
+        session.close()
+
     skip_step = 1
+    # with tf.device("/gpu:1"):
+    #     config_sp = tf.ConfigProto(allow_soft_placement=True)
     with tf.Session() as sess:
         saver = tf.train.Saver()
         ###############################
         ## TO DO: 
         ## 1. initialize your variables
+        sess.run(tf.global_variables_initializer())
         ## 2. create writer to write your graph
+        writer = tf.summary.FileWriter('./graphs',sess.graph)
         ###############################
         sess.run(generated_image.assign(initial_image))
+
         ckpt = tf.train.get_checkpoint_state(os.path.dirname('checkpoints/checkpoint'))
         if ckpt and ckpt.model_checkpoint_path:
             saver.restore(sess, ckpt.model_checkpoint_path)
         initial_step = model['global_step'].eval()
         
+        print("ITERS",ITERS)
+        print("initial_step",initial_step)
+
         start_time = time.time()
         for index in range(initial_step, ITERS):
             if index >= 5 and index < 20:
@@ -150,7 +183,8 @@ def train(model, generated_image, initial_image):
             if (index + 1) % skip_step == 0:
                 ###############################
                 ## TO DO: obtain generated image and loss
-
+                gen_image, total_loss, summary = sess.run([generated_image,
+                                                    model['total_loss'], model['summary_op']])
                 ###############################
                 gen_image = gen_image + MEAN_PIXELS
                 writer.add_summary(summary, global_step=index)
@@ -164,6 +198,7 @@ def train(model, generated_image, initial_image):
 
                 if (index + 1) % 20 == 0:
                     saver.save(sess, 'checkpoints/style_transfer', index)
+        writer.close()
 
 def main():
     with tf.variable_scope('input') as scope:
@@ -184,7 +219,8 @@ def main():
                                                     input_image, content_image, style_image)
     ###############################
     ## TO DO: create optimizer
-    ## model['optimizer'] = ...
+    model['optimizer'] = tf.train.AdamOptimizer(LEARNING_RATE).minimize(model['total_loss'],
+                                                                        global_step = model['global_step'])
     ###############################
     model['summary_op'] = _create_summary(model)
 
