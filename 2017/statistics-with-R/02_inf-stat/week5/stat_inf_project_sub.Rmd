@@ -47,21 +47,6 @@ Also the study is observational and not a control experiment, hence we cannot de
 
 In the GSS survey, population sample incomes were collected. Determine if there is a difference in mean income between the people affiliated with Democrats and people affiliated with Republicans from year 2006 to 2012
 
-2. rs2: Hypothesis test on many groups:
-
-In the GSS survey, population sample incomes were collected. Determine if there is a difference between the mean income collected from all different party affiliations (democrat, independant, republican and other) in 2010.
-
-
-3. rs3: Hypothesis test on two proportions:
-
-In the GSS survey, a sample of population were asked whether they think United States is spending too much money on it, too little money, or about the right amount in improving the conditions of Blacks. Determine if there is a difference in the proportion of the people who said "too litte money" in the years 2008 and 2010. 
-
-4. rs4: Chi-square test for goodness to fit:
-
-In the GSS survey, determine if the distribution of people follwoing different religion in 2008 is similar to the distribution among the people sample in 2010.
-
-5. rs5: Chi-square test for independence:
-
 In the GSS survey, one of the variable was answers to the question about whether abortion can be an option for any woman who wants it, another variable is about how confident one is when it comes to the scientific community. Determine if these variables are independent. 
 
 
@@ -187,7 +172,7 @@ df
 ```
 
 
-Check for conditions:
+**Check for conditions:**
 
   1.  The samples are independent
       - With in group
@@ -198,7 +183,7 @@ Check for conditions:
         
   2. Both the distributiona are slightly right skewed but the sample size is greater than 30.
 
-Performing Inference:
+**Performing Inference:**
 
 Lets form data so that there are only 2 category of the parties in the data to make use of the inference function.
   
@@ -231,56 +216,10 @@ inference(y = coninc, x = partyid, data = rs1_inf,
 ```
 
 
-Decision:
+**Decision:**
 
   Since the p-value is less than 0.05, we can reject the null hypothesis. The data provide convincing evidence for the alternate hypothesis. Given that there is no difference in income between people affiliated with democrat party and republican party, we have very little evidence that the sample gathered supports the null hypothesis.
   
   The range calculated in the confidence interval shows that the difference  of 0 is not in the range of the `(-23254.4846 , -15906.0425)`. Hence we are 95% confident that the people supporting democrat party make less money in the range provided above in comparision with people supporting republican party.
   
-* * *
-### rs2
-* * *
-
-
-* * *
-**Part 4: Inference**
-
-...
-
-* * *
-### rs3
-* * *
-**Part 3: Exploratory data analysis**
-
-...
-
-* * *
-**Part 4: Inference**
-
-...
-
-* * *
-### rs4
-* * *
-**Part 3: Exploratory data analysis**
-
-...
-
-* * *
-**Part 4: Inference**
-
-...
-
-* * *
-### rs5
-* * *
-**Part 3: Exploratory data analysis**
-
-...
-
-* * *
-**Part 4: Inference**
-
-...
-
 * * *
