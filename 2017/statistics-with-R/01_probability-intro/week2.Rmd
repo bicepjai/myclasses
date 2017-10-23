@@ -46,6 +46,7 @@ to load the data:
 
 ```{r load-data}
 data(nycflights)
+nycflights
 ```
 
 The data frame containing `r nrow(nycflights)` flights that shows up in your 
@@ -262,7 +263,7 @@ delays of `sfo_feb_flights`. Which of the following is false?
 ```{r sfo-feb-flights-arrival-delays}
 summary(sfo_feb_flights$arr_delay)
 ```
-```{r sfo-feb-flights-arrival-delays}
+```{r sfo-feb-flights-arrival-delays-plot}
 ggplot(data=sfo_feb_flights, aes(x=arr_delay)) + geom_histogram()
 ```
 
@@ -395,6 +396,7 @@ creating a new variable with the `mutate` function.
 ```{r dep-type}
 nycflights <- nycflights %>%
   mutate(dep_type = ifelse(dep_delay < 5, "on time", "delayed"))
+nycflights
 ```
 
 The first argument in the `mutate` function is the name of the new variable

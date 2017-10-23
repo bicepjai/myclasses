@@ -94,6 +94,7 @@ in a data frame called `kobe_streak` as the `length` variable.
 
 ```{r calc-streak-kobe}
 kobe_streak <- calc_streak(kobe_basket$shot)
+kobe_streak
 ```
 
 We can then take a look at the distribution of these streak lengths.
