@@ -41,7 +41,10 @@ lectures/
 *.mat
 *.Rdata
 *.RData
-
+*.mp4
+*.mp3
+*.m4a
+*.wav
 # R ============================================================
 # History files
 .Rhistory
